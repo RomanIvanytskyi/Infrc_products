@@ -79,7 +79,7 @@ const Product = (props) => {
                   type="submit"
                   onClick={(e) => deleteItem(data._id)}
                 >
-                   <Chip label="Delete" color="success" variant="outlined" />
+                  <Chip label="Delete" color="success" variant="outlined" />
                 </Button>
               </div>
             </div>

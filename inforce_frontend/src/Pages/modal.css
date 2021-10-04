@@ -11,10 +11,8 @@ body{
 	line-height: 1.7;
 	color: #1f2029;
   	background-color: #fff;
-  overflow: hidden;
   background-image: url('https://assets.codepen.io/1462889/back-page.svg');
   background-position: center;
-  background-repeat: no-repeat;
   background-size: 101%;
 }
 p{
@@ -148,7 +146,6 @@ p{
 }
 .modal-wrap {
   position: relative;
-  display: block;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
@@ -166,7 +163,6 @@ p{
   transition: opacity 250ms 250ms ease, transform 300ms 250ms ease;
 }
 .modal-wrap img {
-  display: block;
   width: 100%;
   height: auto;
 }

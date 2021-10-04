@@ -24,18 +24,18 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 const useStyles = makeStyles((theme) => ({
-  // root: {
-  //   maxWidth: 545,
-  //   marginBottom: 15,
-  //   align: "center",
-  // },
-  // media: {
-  //   height: 240,
-  // },
+  root: {
+    maxWidth: 545,
+    marginBottom: 15,
+    align: "center",
+  },
+  media: {
+    height: 240,
+  },
 
-  // container: {
-  //   marginTop: 20,
-  // },
+  container: {
+    marginTop: 20,
+  },
 
   fone: {
     backgroundImage: "url(https://source.unsplash.com/random/)",
@@ -44,6 +44,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     maxWidth: "auto",
+  },
+  paper: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 400,
+    bgcolor: "background.paper",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 4,
   },
   sort: {
     marginLeft: 120,
@@ -201,7 +212,7 @@ const Library = () => {
               </Col>
             );
           })}
-          <ThisModal class="modal" open={open} handleClose={handleClose} id={postID} />
+          <ThisModal open={open} handleClose={handleClose} id={postID} />
         </Row>
       </div>
     </div>
@@ -209,8 +220,6 @@ const Library = () => {
 };
 
 const ThisModal = (props) => {
-  const classes = useStyles();
-
   const body = (
     <div
     class="section full-height"
@@ -219,7 +228,7 @@ const ThisModal = (props) => {
       centered
     >
       <h5 id="simple-modal-title">Edit</h5>
-      <Button class="modal-btn" size="small" color="primary" type="submit" onClick={() => {}}>
+      <Button size="small" color="primary" type="submit" onClick={() => {}}>
         <Edit class="modal-wrap" id={props.id} close={props.handleClose} />
       </Button>
     </div>
