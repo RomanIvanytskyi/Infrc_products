@@ -7,7 +7,7 @@ import { Nav } from "react-bootstrap";
 import { Container } from "@material-ui/core";
 import Modal from "@material-ui/core/Modal";
 import Edit from "./Edit";
-import "./modal.css"
+import "./modal.css";
 import {
   ButtonDropdown,
   DropdownToggle,
@@ -38,7 +38,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   fone: {
-    backgroundImage: "url(https://source.unsplash.com/random/)",
+    backgroundImage:
+      "url(https://png.pngtree.com/background/20210710/original/pngtree-commercial-new-product-listing-h5-background-material-picture-image_1002626.jpg)",
     backgroundRepeat: "no-repeat",
 
     backgroundSize: "cover",
@@ -63,6 +64,15 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     position: "absolute",
+  },
+  margin: {
+    position: "absolute",
+    top: 50,
+    left: 500,
+    marginTop: -50,
+    margiLeft: 400,
+    width: 100,
+    height: 100,
   },
 }));
 
@@ -147,35 +157,37 @@ const Library = () => {
 
   return (
     <div>
-      <AddProduct />
-      <ButtonDropdown
-        className={classes.sort}
-        isOpen={dropdownOpen}
-        toggle={toggle}
-      >
-        <DropdownToggle caret>Sort</DropdownToggle>
-        <DropdownMenu>
-          <DropdownItem
-            onClick={() => {
-              setSorting("Name");
-            }}
-          >
-            Sort by name
-          </DropdownItem>
-          <DropdownItem
-            onClick={() => {
-              setSorting("Count");
-            }}
-          >
-            Sort by count
-          </DropdownItem>
-        </DropdownMenu>
-      </ButtonDropdown>
       <div className={classes.fone}>
+        <div className={classes.margin}>
+          <AddProduct />
+          <ButtonDropdown
+            className={classes.sort}
+            isOpen={dropdownOpen}
+            toggle={toggle}
+          >
+            <DropdownToggle caret>Sort</DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem
+                onClick={() => {
+                  setSorting("Name");
+                }}
+              >
+                Sort by name
+              </DropdownItem>
+              <DropdownItem
+                onClick={() => {
+                  setSorting("Count");
+                }}
+              >
+                Sort by count
+              </DropdownItem>
+            </DropdownMenu>
+          </ButtonDropdown>
+        </div>
         <Row>
           {data.map((post) => {
             return (
-              <Col key={post.id} sm="6">
+              <Col key={post.id} sm="4">
                 <Container key={post.id} fixed className={classes.container}>
                   <Card sx={{ maxWidth: 345 }}>
                     <CardMedia
@@ -222,7 +234,7 @@ const Library = () => {
 const ThisModal = (props) => {
   const body = (
     <div
-    class="section full-height"
+      class="section full-height"
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -236,7 +248,7 @@ const ThisModal = (props) => {
 
   return (
     <Modal
-    class="modal"
+      class="modal"
       open={props.open}
       onClose={props.handleClose}
       aria-labelledby="simple-modal-title"

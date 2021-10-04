@@ -85,6 +85,14 @@ const NewProduct = (props) => {
           />
         </FormGroup>
         <Button>Submit</Button>
+        <Button
+          type="button"
+          onClick={() => {
+            props.close();
+          }}
+        >
+          Close
+        </Button>
       </Form>
     </Container>
   );

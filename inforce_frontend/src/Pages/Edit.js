@@ -38,7 +38,7 @@ const ProductEdit = (props) => {
   });
 
   return (
-    <Form class="modal" onSubmit={formik.handleSubmit}>
+    <Form class="body" onSubmit={formik.handleSubmit}>
       <Container class="modal-btn">
         <Form onSubmit={formik.handleSubmit}>
           <FormGroup>
@@ -54,7 +54,7 @@ const ProductEdit = (props) => {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="count">count</Label>
+            <Label  for="count"> <b class="p" >count</b></Label>
             <Input
               onChange={formik.handleChange}
               value={formik.values.count}

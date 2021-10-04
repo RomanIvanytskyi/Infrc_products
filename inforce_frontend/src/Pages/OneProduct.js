@@ -16,7 +16,7 @@ const Product = (props) => {
   let history = useHistory();
 
   const redirect = () => {
-    history.push("/ ");
+    history.push("/");
   };
 
   useEffect(() => {
@@ -48,6 +48,14 @@ const Product = (props) => {
       {data ? (
         <div>
           <Card className={classes.card} body>
+            <Button
+              className={classes.backBtn}
+              onClick={(e) => {
+                redirect();
+              }}
+            >
+               <Chip label="Back" className={classes.Chip}  />
+            </Button>
             <div className={classes.carddetail}>
               <CardTitle tag="h5" className={classes.cardname}>
                 {data.name}

@@ -31,4 +31,22 @@
     .carddetail .cardImg {
       height: auto;
     }
+    .cardname{
+      position: relative;
+      margin-top: 60px;
+      margin-left: 40px;
+    }
+
+    .Chip{
+      color: rgb(44, 143, 105);
+      text-rendering: geometricPrecision;
+    }
+
+    .backBtn{
+      position: relative;
+      margin-top: 10px;
+      margin-left: -10px;
+      width: 10px;
+      height: 10px;
+    }
   }

@@ -1,7 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import paths from "./paths";
-import classes from "./Layout.module.css";
+
 
 const Layout = ({ children }) => {
   return (
@@ -9,9 +7,14 @@ const Layout = ({ children }) => {
       <Navbar bg="dark" expand="lg">
         <Container>
           <Nav className="mr-auto">
-            <Nav.Link className={classes.NavLinks} as={Link} to={paths.home}>
-              <p className={classes.NavLinks}> Library</p>
-            </Nav.Link>
+            <a
+              color="inherit"
+              href="https://github.com/RomanIvanytskyi"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>{" "}
           </Nav>
         </Container>
       </Navbar>
